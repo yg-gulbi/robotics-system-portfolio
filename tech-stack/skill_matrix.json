@@ -1,0 +1,171 @@
+[
+  {
+    "category": "Language",
+    "skill": "C",
+    "level": 5,
+    "experience": "Arduino 코드 작성과 운영체제 실습 계획에 사용",
+    "relatedProject": ["self-balancing-robot", "computer-architecture-os-lab"],
+    "nextStep": "포인터, 메모리 구조, 시스템 콜 실습 심화"
+  },
+  {
+    "category": "Language",
+    "skill": "C++",
+    "level": 4,
+    "experience": "로봇/임베디드 코드 구조 학습 중",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "클래스 기반 구조화와 ROS C++ 노드 학습"
+  },
+  {
+    "category": "Language",
+    "skill": "Python",
+    "level": 6,
+    "experience": "데이터 처리, 자동화, 시뮬레이션 실습에 활용",
+    "relatedProject": ["computer-architecture-os-lab", "robotics-simulation-lab"],
+    "nextStep": "객체지향 구조화와 실험 자동화 정리"
+  },
+  {
+    "category": "Language",
+    "skill": "MATLAB",
+    "level": 4,
+    "experience": "제어공학 계산과 시뮬레이션 학습에 사용",
+    "relatedProject": ["control-theory"],
+    "nextStep": "상태공간, LQR 실습 정리"
+  },
+  {
+    "category": "Embedded",
+    "skill": "Arduino",
+    "level": 6,
+    "experience": "센서 입력과 로봇 제어 실험에 적용",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "ODrive, BLDC 제어와 안정성 실험"
+  },
+  {
+    "category": "System",
+    "skill": "Linux",
+    "level": 4,
+    "experience": "운영체제 실습 환경으로 학습 중",
+    "relatedProject": ["computer-architecture-os-lab"],
+    "nextStep": "프로세스, 스레드, 파일 디스크립터 실습"
+  },
+  {
+    "category": "Robotics",
+    "skill": "ROS",
+    "level": 5,
+    "experience": "토픽, 노드, Gazebo 연동 학습 경험",
+    "relatedProject": ["robotics-simulation-lab"],
+    "nextStep": "실제 로봇 제어 흐름과 연결"
+  },
+  {
+    "category": "Robotics",
+    "skill": "ROS2",
+    "level": 2,
+    "experience": "개념과 전환 방향 학습 중",
+    "relatedProject": ["robotics-simulation-lab"],
+    "nextStep": "ROS와 차이를 정리하고 기본 노드 실습"
+  },
+  {
+    "category": "Robotics",
+    "skill": "Gazebo",
+    "level": 4,
+    "experience": "로봇 시뮬레이션 환경 학습 중",
+    "relatedProject": ["robotics-simulation-lab"],
+    "nextStep": "센서 플러그인과 제어 실험 기록"
+  },
+  {
+    "category": "Tooling",
+    "skill": "Git/GitHub",
+    "level": 6,
+    "experience": "README, 학습 기록, 프로젝트 문서 관리에 사용",
+    "relatedProject": ["portfolio"],
+    "nextStep": "커밋 단위와 문서 구조 개선"
+  },
+  {
+    "category": "Control",
+    "skill": "제어공학",
+    "level": 5,
+    "experience": "PID, 상태공간, LQR 개념을 학습 중",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "실제 실험 결과와 이론 연결"
+  },
+  {
+    "category": "Control",
+    "skill": "PID 제어",
+    "level": 6,
+    "experience": "밸런스 로봇 자세 제어 실험에 적용 중",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "실험 기반 튜닝 과정 문서화"
+  },
+  {
+    "category": "Sensor",
+    "skill": "센서 데이터 처리",
+    "level": 5,
+    "experience": "IMU 입력을 자세 제어와 연결",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "필터링과 노이즈 처리 실험"
+  },
+  {
+    "category": "Sensor",
+    "skill": "LiDAR",
+    "level": 2,
+    "experience": "자율주행 확장 요소로 학습 예정",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "기본 원리와 ROS 토픽 실습"
+  },
+  {
+    "category": "Sensor",
+    "skill": "IMU",
+    "level": 6,
+    "experience": "기울기 측정과 자세 제어에 사용",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "보정, 필터링, 드리프트 처리 정리"
+  },
+  {
+    "category": "CS",
+    "skill": "컴퓨터구조",
+    "level": 4,
+    "experience": "책 1회독 후 핵심 개념 정리",
+    "relatedProject": ["computer-architecture-os-lab"],
+    "nextStep": "C/Linux 실습으로 동작 확인"
+  },
+  {
+    "category": "CS",
+    "skill": "운영체제",
+    "level": 4,
+    "experience": "프로세스, 스레드, 메모리, 파일 시스템 학습",
+    "relatedProject": ["computer-architecture-os-lab"],
+    "nextStep": "시스템 콜 추적과 동기화 실습"
+  },
+  {
+    "category": "CS",
+    "skill": "시스템 콜",
+    "level": 3,
+    "experience": "개념 학습 후 실습 예정",
+    "relatedProject": ["computer-architecture-os-lab"],
+    "nextStep": "파일 I/O와 프로세스 관련 syscall 추적"
+  },
+  {
+    "category": "CS",
+    "skill": "프로세스/스레드",
+    "level": 4,
+    "experience": "개념 정리와 실습 계획 수립",
+    "relatedProject": ["computer-architecture-os-lab"],
+    "nextStep": "Race Condition, Mutex 실습"
+  },
+  {
+    "category": "Embedded",
+    "skill": "임베디드 시스템",
+    "level": 5,
+    "experience": "Arduino 기반 센서/모터 제어 경험",
+    "relatedProject": ["self-balancing-robot"],
+    "nextStep": "실시간 제어와 통신 안정성 정리"
+  },
+  {
+    "category": "Robotics",
+    "skill": "로봇 시뮬레이션",
+    "level": 4,
+    "experience": "Gazebo/ROS 기반 실습 중",
+    "relatedProject": ["robotics-simulation-lab"],
+    "nextStep": "실제 로봇 프로젝트와 비교"
+  }
+]
+
