@@ -4,6 +4,10 @@
 
 이 저장소는 완성된 결과물만 나열하기보다, 어떤 기술을 공부했고 어떤 실습으로 검증하고 있으며 앞으로 어떤 방향으로 확장할지 정리하는 데 목적이 있습니다.
 
+## Website
+
+- GitHub Pages: https://yg-gulbi.github.io/robotics-system-portfolio/
+
 ## 저장소 이름 선택 이유
 
 저장소 이름은 `robotics-system-portfolio`로 정했습니다. `robotics-sw-portfolio`보다 운영체제와 시스템 프로그래밍 기초까지 담기 좋고, `embedded-robotics-portfolio`보다 로봇 SW와 시스템 학습의 균형을 자연스럽게 보여줄 수 있기 때문입니다.
@@ -65,4 +69,3 @@
 2. 운영체제 학습 내용을 C/Linux 실습 결과와 연결합니다.
 3. ROS/Gazebo 실습을 실제 로봇 프로젝트의 확장 근거로 정리합니다.
 4. 언어 학습 기록은 기술 문서 읽기와 설명 능력으로 연결합니다.
-

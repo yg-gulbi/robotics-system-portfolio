@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="로봇 SW, 임베디드, 제어, ROS, 운영체제 기초를 프로젝트와 실습으로 연결하는 yg-gulbi의 Robotics System Portfolio입니다."
+    >
+    <title>Robotics System Portfolio | yg-gulbi</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">yg-gulbi</a>
+      <nav class="site-nav" aria-label="주요 섹션">
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#study">Study</a>
+        <a href="#languages">Languages</a>
+        <a href="https://github.com/yg-gulbi/robotics-system-portfolio">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Robotics System Portfolio</p>
+          <h1 id="hero-title">로봇 SW와 시스템 기초를 프로젝트로 연결하는 기록</h1>
+          <p class="hero-copy">
+            제어, 센서, ROS, 임베디드, 운영체제 기초를 과장 없이 정리하고,
+            진행 중인 실험과 다음 보완점을 문서로 남깁니다.
+          </p>
+          <div class="meta-row" aria-label="포트폴리오 키워드">
+            <span>Robotics SW</span>
+            <span>Embedded</span>
+            <span>Control</span>
+            <span>OS / Linux</span>
+          </div>
+          <div class="hero-actions" aria-label="주요 링크">
+            <a class="button primary" href="https://github.com/yg-gulbi/robotics-system-portfolio">문서 저장소</a>
+            <a class="button secondary" href="#projects">프로젝트 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section compact-intro" aria-labelledby="direction-title">
+        <div class="section-heading">
+          <p class="eyebrow">Direction</p>
+          <h2 id="direction-title">완성보다 검증, 나열보다 연결</h2>
+        </div>
+        <p class="lead">
+          밸런스 로봇, 운영체제 실습, ROS/Gazebo 시뮬레이션을 따로 흩어진 경험으로 두지 않고
+          센서 입력, 제어, 시스템 동작, 문서화 흐름으로 묶어 정리합니다.
+        </p>
+      </section>
+
+      <section class="section" id="stack" aria-labelledby="stack-title">
+        <div class="section-heading">
+          <p class="eyebrow">Skill Stack</p>
+          <h2 id="stack-title">현재 기술 스택</h2>
+        </div>
+        <div class="stack-grid">
+          <article class="info-card">
+            <span class="card-label">Language</span>
+            <h3>C / C++ / Python</h3>
+            <p>Arduino 코드, 운영체제 실습, 시뮬레이션 자동화에 연결해 정리합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Embedded</span>
+            <h3>Arduino / IMU / Motor</h3>
+            <p>센서 입력과 모터 제어를 밸런스 로봇 프로젝트 안에서 검증합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Robotics</span>
+            <h3>ROS / Gazebo</h3>
+            <p>토픽, 노드, 시뮬레이션 흐름을 실제 로봇 제어와 연결하는 중입니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Control</span>
+            <h3>PID / LQR</h3>
+            <p>자세 제어 실험을 통해 제어 개념을 하드웨어 결과와 비교합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">System</span>
+            <h3>OS / Linux</h3>
+            <p>프로세스, 스레드, 메모리, 시스템 콜을 C/Linux 실습으로 확인합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section project-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">핵심 프로젝트</h2>
+        </div>
+        <article class="feature-project">
+          <img src="assets/images/robot-open-front.png" alt="2륜 밸런스 로봇 하드웨어 전면 구성">
+          <div class="feature-body">
+            <p class="project-status">진행 중</p>
+            <h3>Self Balancing Robot</h3>
+            <p>
+              IMU 센서 입력, PID/LQR 제어, ODrive와 BLDC 모터 제어를 연결해
+              2륜 로봇의 자세 안정화를 실험하는 중심 프로젝트입니다.
+            </p>
+            <ul class="result-list">
+              <li>센서 입력, 제어 로직, 모터 구동을 분리해 검증</li>
+              <li>ROS/Gazebo 시뮬레이션과 실제 하드웨어 비교 예정</li>
+              <li>LiDAR/카메라 기반 자율주행 확장 가능성 정리</li>
+            </ul>
+            <a class="text-link" href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/projects/self-balancing-robot">프로젝트 문서 보기</a>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="info-card">
+            <span class="card-label">계획 / 진행 중</span>
+            <h3>Computer Architecture OS Lab</h3>
+            <p>C, Python, Linux로 프로그램 실행, 메모리, 프로세스, 스레드, 시스템 콜을 실습합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">학습 중</span>
+            <h3>Robotics Simulation Lab</h3>
+            <p>Gazebo/ROS 기반 로봇 모델링, 센서 토픽, 제어 노드 실험을 정리합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">아이디어 구체화 중</span>
+            <h3>Climbing AI Training System</h3>
+            <p>컨디션과 목표에 따라 훈련 루틴을 추천하는 보조 아이디어 프로젝트입니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section visual-section" aria-labelledby="flow-title">
+        <div class="section-heading">
+          <p class="eyebrow">Control Flow</p>
+          <h2 id="flow-title">센서에서 제어 입력까지</h2>
+        </div>
+        <div class="visual-grid">
+          <img src="assets/images/physical-balance-control-loop.png" alt="밸런스 로봇 제어 루프 다이어그램">
+          <p>
+            포트폴리오의 중심은 로봇이 실제로 움직이는 흐름을 이해하는 것입니다.
+            센서 값을 읽고, 제어 입력을 계산하고, 구동부 응답을 관찰한 뒤 문서로 남깁니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="study" aria-labelledby="study-title">
+        <div class="section-heading">
+          <p class="eyebrow">Study Notes</p>
+          <h2 id="study-title">학습 기록</h2>
+        </div>
+        <div class="study-grid">
+          <article class="info-card">
+            <h3>컴퓨터구조 + 운영체제</h3>
+            <p>책 1회독 내용을 Linux/C 실습으로 체감하는 방향으로 정리합니다.</p>
+          </article>
+          <article class="info-card">
+            <h3>제어공학</h3>
+            <p>PID, 상태공간, LQR을 균형 로봇 제어 실험과 연결합니다.</p>
+          </article>
+          <article class="info-card">
+            <h3>임베디드 시스템</h3>
+            <p>Arduino, 센서 입력, 모터 제어, 통신 기초를 프로젝트 단위로 기록합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="languages" aria-labelledby="languages-title">
+        <div class="section-heading">
+          <p class="eyebrow">Languages</p>
+          <h2 id="languages-title">언어 기록</h2>
+        </div>
+        <div class="language-grid">
+          <article class="info-card">
+            <span class="card-label">Japanese</span>
+            <h3>일본어 학습 기록</h3>
+            <p>문법, 어휘, 표현을 꾸준히 정리하며 실제 근거가 생기면 자격과 함께 갱신합니다.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-label">English</span>
+            <h3>기술 문서 독해</h3>
+            <p>ROS, Linux, Arduino 공식 문서와 GitHub README 작성에 필요한 표현을 정리합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section closing-section" aria-labelledby="docs-title">
+        <div class="section-heading">
+          <p class="eyebrow">Repository</p>
+          <h2 id="docs-title">자세한 문서</h2>
+        </div>
+        <div class="link-grid">
+          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/blob/main/tech-stack/skill_matrix.md">
+            <span>Skill Matrix</span>
+            <strong>기술 수준과 다음 보완점</strong>
+          </a>
+          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/study-notes">
+            <span>Study Notes</span>
+            <strong>학습 자료와 실습 계획</strong>
+          </a>
+          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/resume-summary">
+            <span>Resume Summary</span>
+            <strong>이력서용 요약 문장</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Updated 2026-06-05</span>
+      <a href="#top">Back to top</a>
+    </footer>
+  </body>
+</html>
