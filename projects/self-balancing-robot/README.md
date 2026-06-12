@@ -2,76 +2,91 @@
 
 ## 프로젝트 개요
 
-2륜 밸런스 로봇을 직접 제작하고, 자세 제어와 주행 제어를 구현하기 위한 진행 중 프로젝트입니다.
+2륜 셀프 밸런싱 로봇을 직접 제작하고, Arduino 기반 실시간 자세 제어와 ROS/Gazebo workflow를 함께 정리한 중심 프로젝트입니다.
+
+원본 저장소:
+
+- [Self-Balancing-Robot-with-Arduino-and-ROS](https://github.com/yg-gulbi/Self-Balancing-Robot-with-Arduino-and-ROS)
 
 ## 문제 정의
 
-2륜 로봇은 정적으로 불안정하기 때문에, IMU 센서 데이터를 바탕으로 실시간 자세 제어가 필요합니다. 센서 입력, 제어 알고리즘, 모터 구동이 서로 맞지 않으면 로봇이 쉽게 넘어지기 때문에 각 요소를 분리해 실험하고 연결해야 합니다.
+2륜 로봇은 정적으로 불안정하기 때문에 IMU, wheel feedback, RC 입력, 모터 명령, 안전 조건이 하나의 신뢰 가능한 루프로 연결되어야 합니다. 상위 명령이 모터로 바로 전달되면 작은 센서 노이즈나 잘못된 입력도 넘어짐으로 이어질 수 있으므로, low-level balance loop와 safety layer를 분리해 다루는 것이 중요했습니다.
 
-## 목표
+## 실제 결과
 
-- 로봇의 기울기 측정
-- PID 또는 LQR 기반 자세 제어
-- BLDC 모터 제어
-- Arduino와 ODrive 연동
-- ROS/Gazebo 시뮬레이션과 실제 로봇 제어 연결
-- 추후 LiDAR/카메라 기반 자율주행으로 확장
+| 항목 | 결과 |
+| --- | --- |
+| 실제 균형 유지 | 약 1시간 standing balance |
+| 실제 주행 | 10m 복도 주행 |
+| 장애물 주행 | 간단한 실내 장애물 코스 수행 |
+| ROS/Gazebo | simulation, SLAM map generation, navigation command path 문서화 |
+| Arduino-to-ROS | `/imu`, `/odom`, `cmd_vel` 흐름을 bridge sketch와 실험 기록으로 보존 |
+
+## 목표와 범위
+
+- IMU 기반 body angle과 gyro feedback으로 자세 안정화
+- RC PWM 입력을 filtering, deadband, engage persistence로 안정화
+- ODrive current command와 BLDC hub motor feedback 연결
+- tilt cutoff와 current clamp로 safety boundary 구성
+- ROS/Gazebo simulation과 실제 Arduino control path의 차이 정리
+- physical full autonomous navigation은 완료 결과가 아니라 future work로 분리
 
 ## 사용 기술
 
-- Arduino
+- Arduino Mega 2560
 - C/C++
-- IMU
-- ODrive
-- BLDC Motor
-- PID Control
-- LQR
-- ROS
-- Gazebo
+- BNO055 IMU
+- ODrive 3.6
+- BLDC hub motor
+- RC receiver / PWM input
+- PID / body angle feedback
+- ROS / Gazebo
 - Linux
+- CAD / 3D printing
 
 ## 시스템 구조
 
 ```text
-IMU Sensor
-  -> Arduino
-  -> Control Logic(PID/LQR)
+RC or ROS-side intent
+  -> Arduino safety checks
+  -> body angle feedback
+  -> speed loop
+  -> steering correction
+  -> current clamp
   -> ODrive
-  -> BLDC Motor
-  -> Robot Motion
+  -> BLDC motors
+  -> robot motion
 ```
 
-ROS/Gazebo 연동은 실제 제어 구조와 비교하기 위한 확장 계획으로 정리합니다.
+ROS/Gazebo는 실제 로봇의 command structure, simulation workflow, SLAM/navigation 실험을 설명하는 보조 축으로 정리합니다.
 
 ## 구현 내용
 
-- IMU 센서 입력 기반 기울기 측정 실험
-- PID 제어 구조 학습 및 적용 준비
-- Arduino와 모터 제어 흐름 정리
-- ROS/Gazebo 시뮬레이션 연결 가능성 검토
+- IMU 기반 body angle, angular velocity feedback 처리
+- RC throttle, steering, engage PWM filtering
+- tilt cutoff와 current clamp를 통한 안전 조건 적용
+- ODrive current command 기반 모터 제어
+- ROS/Gazebo simulation, navigation command routing, SLAM workflow 구성
+- CAD/3D printing 기반 sensor case, board plate, battery mount 정리
 
-## 실행 방법
+## 결과와 한계
 
-현재는 문서화와 실험 정리 단계입니다. 코드와 회로, 실행 방법은 안정적인 실험 단위가 정리되면 추가합니다.
-
-## 결과
-
-진행 중 프로젝트이므로 완성 결과를 과장하지 않습니다. 현재는 하드웨어 구성, 센서 입력, 제어 알고리즘, 모터 구동을 분리해 검증하는 방향으로 정리하고 있습니다.
+이 프로젝트의 강한 근거는 실제 balancing과 RC driving입니다. ROS/Gazebo 쪽은 simulation navigation과 SLAM workflow를 완료된 software-side 결과로 다루고, 실제 로봇의 end-to-end autonomous navigation은 아직 future work로 분리합니다.
 
 ## 배운 점
 
-- 균형 로봇은 센서, 제어, 모터 구동, 시간 지연이 함께 맞아야 안정화됩니다.
-- 제어 알고리즘 자체뿐 아니라 센서 노이즈와 구동부 응답도 중요합니다.
-- 실제 하드웨어 검증은 시뮬레이션과 다른 변수들을 드러냅니다.
+- 균형 로봇은 제어식 하나보다 센서, 통신, 모터, 안전 조건이 함께 맞아야 안정화됩니다.
+- RC 입력과 모터 feedback은 노이즈와 이상값을 전제로 다뤄야 합니다.
+- 상위 navigation 명령은 직접 모터 권한이 아니라 motion intent로 다루는 것이 안전합니다.
+- 공개 포트폴리오에서는 completed result, simulation result, future work를 분리해야 과장이 줄어듭니다.
 
-## 개선할 점
+## 다음 보완점
 
-- PID 튜닝 과정 기록
-- IMU 필터링과 보정 정리
-- ODrive/BLDC 제어 실험 결과 추가
-- ROS/Gazebo 시뮬레이션과 실제 실험 비교
+- tuning 과정과 증상별 대응을 더 짧은 표로 정리
+- IMU 보정과 filtering 근거 보강
+- ROS/Gazebo workflow와 실제 robot control loop의 차이를 그림으로 요약
+- 3D printed part의 설계 의도와 assembly 근거 연결
 
 ## 포트폴리오 요약
 
-2륜 밸런스 로봇을 직접 제작하며 IMU, PID/LQR, 모터 제어, ROS/Gazebo 확장 가능성을 실험하고 문서화하는 프로젝트입니다.
-
+Arduino 기반 2륜 셀프 밸런싱 로봇을 직접 제작하며 IMU feedback, RC 신호 처리, ODrive current command, safety layer, ROS/Gazebo workflow를 통합하고 문서화한 프로젝트입니다.

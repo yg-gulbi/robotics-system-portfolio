@@ -2,17 +2,12 @@
 
 ## Self Balancing Robot
 
-2륜 밸런스 로봇을 직접 제작하며 IMU 센서 입력, PID/LQR 제어, BLDC 모터 제어, ROS/Gazebo 확장을 실험 중인 프로젝트입니다.
+Arduino 기반 2륜 셀프 밸런싱 로봇을 직접 제작하며 IMU feedback, RC 신호 처리, ODrive current command, safety layer, ROS/Gazebo simulation workflow를 통합하고 문서화한 프로젝트입니다.
 
-## Computer Architecture OS Lab
+## Project Scope Policy
 
-컴퓨터구조와 운영체제의 핵심 개념을 C/Python/Linux 환경에서 실습하고 문서화하는 학습 프로젝트입니다.
+현재 포트폴리오에서 프로젝트로 강조하는 항목은 실제 결과물, 코드, 하드웨어, 데모, 결과/한계 문서가 있는 `Self Balancing Robot`입니다.
 
-## Robotics Simulation Lab
+## Knowledge / Study Records
 
-ROS/Gazebo 기반 로봇 모델링, 센서 토픽, 제어 노드를 학습하고 실제 로봇 프로젝트로 확장하기 위한 실습 프로젝트입니다.
-
-## Climbing AI Training System
-
-컨디션과 목표에 따라 클라이밍 훈련 루틴을 추천하는 AI/자동화 기반 아이디어 프로젝트입니다.
-
+컴퓨터구조/운영체제, ROS/Gazebo 학습, 강화학습/딥러닝, 3D 모델링/프린팅, 클라이밍 자동화 아이디어는 프로젝트가 아니라 학습 기록, 응용 실험 근거, 아이디어 기록으로 분리합니다.

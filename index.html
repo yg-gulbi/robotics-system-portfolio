@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="로봇 SW, 임베디드, 제어, ROS, 운영체제 기초를 프로젝트와 실습으로 연결하는 yg-gulbi의 Robotics System Portfolio입니다."
+      content="실제 밸런싱 로봇 프로젝트와 로보틱스, 시스템, AI/RL, 언어 학습 지도를 분리해 정리한 yg-gulbi의 포트폴리오입니다."
     >
     <title>Robotics System Portfolio | yg-gulbi</title>
     <link rel="stylesheet" href="styles.css">
@@ -15,9 +15,10 @@
       <a class="brand" href="#top">yg-gulbi</a>
       <nav class="site-nav" aria-label="주요 섹션">
         <a href="#stack">Stack</a>
-        <a href="#projects">Projects</a>
-        <a href="#study">Study</a>
+        <a href="#project">Project</a>
+        <a href="#knowledge">Knowledge</a>
         <a href="#languages">Languages</a>
+        <a href="#about">About</a>
         <a href="https://github.com/yg-gulbi/robotics-system-portfolio">GitHub</a>
       </nav>
     </header>
@@ -26,20 +27,21 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
           <p class="eyebrow">Robotics System Portfolio</p>
-          <h1 id="hero-title">로봇 SW와 시스템 기초를 프로젝트로 연결하는 기록</h1>
+          <h1 id="hero-title">실제 구현 근거와<br>학습 지도를 분리해<br>정리하는 포트폴리오</h1>
           <p class="hero-copy">
-            제어, 센서, ROS, 임베디드, 운영체제 기초를 과장 없이 정리하고,
-            진행 중인 실험과 다음 보완점을 문서로 남깁니다.
+            완성된 결과물은 프로젝트로, 공부한 내용은 지식 지도와 실험 근거로 나누어 기록합니다.
+            중심에는 직접 제작한 2륜 셀프 밸런싱 로봇이 있고, 그 주변에 로보틱스, 임베디드,
+            시스템, AI/RL, 언어 학습을 연결합니다.
           </p>
           <div class="meta-row" aria-label="포트폴리오 키워드">
-            <span>Robotics SW</span>
-            <span>Embedded</span>
-            <span>Control</span>
-            <span>OS / Linux</span>
+            <span>Real Robot</span>
+            <span>Embedded Control</span>
+            <span>ROS / Gazebo</span>
+            <span>Knowledge Map</span>
           </div>
           <div class="hero-actions" aria-label="주요 링크">
-            <a class="button primary" href="https://github.com/yg-gulbi/robotics-system-portfolio">문서 저장소</a>
-            <a class="button secondary" href="#projects">프로젝트 보기</a>
+            <a class="button primary" href="#project">대표 프로젝트</a>
+            <a class="button secondary" href="#knowledge">학습 지도</a>
           </div>
         </div>
       </section>
@@ -47,11 +49,12 @@
       <section class="section compact-intro" aria-labelledby="direction-title">
         <div class="section-heading">
           <p class="eyebrow">Direction</p>
-          <h2 id="direction-title">완성보다 검증, 나열보다 연결</h2>
+          <h2 id="direction-title">프로젝트는 결과물로, 학습은 근거로</h2>
         </div>
         <p class="lead">
-          밸런스 로봇, 운영체제 실습, ROS/Gazebo 시뮬레이션을 따로 흩어진 경험으로 두지 않고
-          센서 입력, 제어, 시스템 동작, 문서화 흐름으로 묶어 정리합니다.
+          공부한 주제를 억지로 프로젝트라고 부르지 않습니다. 실제 하드웨어, 코드, 데모, 문서가 있는
+          결과물은 프로젝트로 두고, 아직 배우는 중인 내용은 어디까지 이해했고 무엇을 다음에 검증할지
+          분명하게 남깁니다.
         </p>
       </section>
 
@@ -62,106 +65,116 @@
         </div>
         <div class="stack-grid">
           <article class="info-card">
-            <span class="card-label">Language</span>
-            <h3>C / C++ / Python</h3>
-            <p>Arduino 코드, 운영체제 실습, 시뮬레이션 자동화에 연결해 정리합니다.</p>
+            <span class="card-label">Programming</span>
+            <h3>C / C++ / Python / MATLAB</h3>
+            <p>펌웨어, ROS 노드, 실험 자동화, 제어 계산을 구분해 정리합니다.</p>
           </article>
           <article class="info-card">
             <span class="card-label">Embedded</span>
-            <h3>Arduino / IMU / Motor</h3>
-            <p>센서 입력과 모터 제어를 밸런스 로봇 프로젝트 안에서 검증합니다.</p>
+            <h3>Arduino / IMU / ODrive</h3>
+            <p>센서 입력, RC 신호, 모터 전류 명령, 안전 조건을 실제 로봇에서 다뤘습니다.</p>
           </article>
           <article class="info-card">
             <span class="card-label">Robotics</span>
-            <h3>ROS / Gazebo</h3>
-            <p>토픽, 노드, 시뮬레이션 흐름을 실제 로봇 제어와 연결하는 중입니다.</p>
+            <h3>ROS / Gazebo / SLAM</h3>
+            <p>시뮬레이션, 토픽 흐름, navigation command path를 로봇 구조와 연결합니다.</p>
           </article>
           <article class="info-card">
             <span class="card-label">Control</span>
-            <h3>PID / LQR</h3>
-            <p>자세 제어 실험을 통해 제어 개념을 하드웨어 결과와 비교합니다.</p>
+            <h3>PID / Body Feedback</h3>
+            <p>body angle feedback, speed loop, steering correction, safety layer로 자세 제어를 설명합니다.</p>
           </article>
           <article class="info-card">
-            <span class="card-label">System</span>
-            <h3>OS / Linux</h3>
-            <p>프로세스, 스레드, 메모리, 시스템 콜을 C/Linux 실습으로 확인합니다.</p>
+            <span class="card-label">Mechanical</span>
+            <h3>CAD / 3D Printing</h3>
+            <p>보드, 배터리, 센서 케이스, 보호 구조를 실제 조립과 출력 관점에서 정리합니다.</p>
           </article>
         </div>
       </section>
 
-      <section class="section project-section" id="projects" aria-labelledby="projects-title">
+      <section class="section project-section" id="project" aria-labelledby="project-title">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2 id="projects-title">핵심 프로젝트</h2>
+          <p class="eyebrow">Main Project</p>
+          <h2 id="project-title">Self Balancing Robot</h2>
         </div>
         <article class="feature-project">
-          <img src="assets/images/robot-open-front.png" alt="2륜 밸런스 로봇 하드웨어 전면 구성">
+          <img src="assets/images/robot-open-front.png" alt="2륜 밸런싱 로봇 하드웨어 전면 구성">
           <div class="feature-body">
-            <p class="project-status">진행 중</p>
-            <h3>Self Balancing Robot</h3>
+            <p class="project-status">실제 하드웨어 / 코드 / 데모 근거 보유</p>
+            <h3>Arduino-ROS 셀프 밸런싱 로봇</h3>
             <p>
-              IMU 센서 입력, PID/LQR 제어, ODrive와 BLDC 모터 제어를 연결해
-              2륜 로봇의 자세 안정화를 실험하는 중심 프로젝트입니다.
+              Arduino가 실시간 균형 제어와 안전 판단을 맡고, ROS/Gazebo는 시뮬레이션,
+              SLAM, navigation workflow 검증에 사용한 중심 프로젝트입니다.
             </p>
             <ul class="result-list">
-              <li>센서 입력, 제어 로직, 모터 구동을 분리해 검증</li>
-              <li>ROS/Gazebo 시뮬레이션과 실제 하드웨어 비교 예정</li>
-              <li>LiDAR/카메라 기반 자율주행 확장 가능성 정리</li>
+              <li>실제 로봇이 약 1시간 standing balance를 유지</li>
+              <li>10m 복도 주행과 간단한 실내 장애물 코스 주행 수행</li>
+              <li>RC PWM filtering, tilt cutoff, current clamp로 안전 계층 구성</li>
+              <li>ROS/Gazebo simulation, SLAM map generation, navigation command path 문서화</li>
             </ul>
-            <a class="text-link" href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/projects/self-balancing-robot">프로젝트 문서 보기</a>
+            <div class="link-row">
+              <a class="text-link" href="https://github.com/yg-gulbi/Self-Balancing-Robot-with-Arduino-and-ROS">원본 프로젝트 저장소</a>
+              <a class="text-link" href="projects/self-balancing-robot/README.md">포트폴리오 요약</a>
+            </div>
           </div>
         </article>
-
-        <div class="project-grid">
-          <article class="info-card">
-            <span class="card-label">계획 / 진행 중</span>
-            <h3>Computer Architecture OS Lab</h3>
-            <p>C, Python, Linux로 프로그램 실행, 메모리, 프로세스, 스레드, 시스템 콜을 실습합니다.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-label">학습 중</span>
-            <h3>Robotics Simulation Lab</h3>
-            <p>Gazebo/ROS 기반 로봇 모델링, 센서 토픽, 제어 노드 실험을 정리합니다.</p>
-          </article>
-          <article class="info-card">
-            <span class="card-label">아이디어 구체화 중</span>
-            <h3>Climbing AI Training System</h3>
-            <p>컨디션과 목표에 따라 훈련 루틴을 추천하는 보조 아이디어 프로젝트입니다.</p>
-          </article>
-        </div>
       </section>
 
       <section class="section visual-section" aria-labelledby="flow-title">
         <div class="section-heading">
           <p class="eyebrow">Control Flow</p>
-          <h2 id="flow-title">센서에서 제어 입력까지</h2>
+          <h2 id="flow-title">센서에서 안전한 모터 명령까지</h2>
         </div>
         <div class="visual-grid">
-          <img src="assets/images/physical-balance-control-loop.png" alt="밸런스 로봇 제어 루프 다이어그램">
+          <img src="assets/images/physical-balance-control-loop.png" alt="밸런싱 로봇 제어 루프 다이어그램">
           <p>
-            포트폴리오의 중심은 로봇이 실제로 움직이는 흐름을 이해하는 것입니다.
-            센서 값을 읽고, 제어 입력을 계산하고, 구동부 응답을 관찰한 뒤 문서로 남깁니다.
+            핵심은 상위 명령이 모터로 바로 가지 않게 하는 것입니다. RC 또는 ROS 쪽 의도는 Arduino의
+            balance loop와 safety layer를 거친 뒤 ODrive current command로 바뀝니다.
           </p>
         </div>
       </section>
 
-      <section class="section" id="study" aria-labelledby="study-title">
+      <section class="section" id="knowledge" aria-labelledby="knowledge-title">
         <div class="section-heading">
-          <p class="eyebrow">Study Notes</p>
-          <h2 id="study-title">학습 기록</h2>
+          <p class="eyebrow">Knowledge Map</p>
+          <h2 id="knowledge-title">프로젝트가 아닌 학습과 응용 실험</h2>
         </div>
-        <div class="study-grid">
+        <div class="knowledge-grid">
           <article class="info-card">
-            <h3>컴퓨터구조 + 운영체제</h3>
-            <p>책 1회독 내용을 Linux/C 실습으로 체감하는 방향으로 정리합니다.</p>
+            <span class="card-label">System / CS</span>
+            <h3>컴퓨터구조와 운영체제</h3>
+            <p>C/Linux 실습으로 프로세스, 스레드, 메모리, 시스템 콜을 확인할 학습 기록입니다.</p>
+            <a class="card-link" href="study-notes/computer-architecture-os/README.md">학습 기록 보기</a>
           </article>
           <article class="info-card">
-            <h3>제어공학</h3>
-            <p>PID, 상태공간, LQR을 균형 로봇 제어 실험과 연결합니다.</p>
+            <span class="card-label">Robotics Study</span>
+            <h3>ROS / Gazebo / Navigation</h3>
+            <p>시뮬레이션과 실제 로봇의 command layer를 비교하기 위한 학습 지도입니다.</p>
+            <a class="card-link" href="study-notes/robotics/README.md">학습 기록 보기</a>
           </article>
           <article class="info-card">
-            <h3>임베디드 시스템</h3>
-            <p>Arduino, 센서 입력, 모터 제어, 통신 기초를 프로젝트 단위로 기록합니다.</p>
+            <span class="card-label">AI / RL</span>
+            <h3>Deep Learning / Reinforcement Learning</h3>
+            <p>Q-learning, DDPG, Input Shaper 실험을 제어 문제로 확장해 본 응용 학습 기록입니다.</p>
+            <a class="card-link" href="https://github.com/yg-gulbi/rl-deep-learning-applied-notes">응용 노트 보기</a>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Mechanical / 3D</span>
+            <h3>3D Modeling / Printing</h3>
+            <p>센서 케이스, 보드 플레이트, 배터리 배치, 출력용 STL/STEP을 프로젝트 단위로 정리했습니다.</p>
+            <a class="card-link" href="https://github.com/yg-gulbi/3d-modeling-printing-notes">3D 노트 보기</a>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Idea Log</span>
+            <h3>Climbing AI Training System</h3>
+            <p>운동 루틴 추천 아이디어는 구현 전 단계이므로 프로젝트가 아니라 아이디어 기록으로 보관합니다.</p>
+            <a class="card-link" href="projects/climbing-ai-training-system/README.md">아이디어 기록 보기</a>
+          </article>
+          <article class="info-card">
+            <span class="card-label">Documentation</span>
+            <h3>README / Resume Summary</h3>
+            <p>성과, 한계, 학습 중인 내용을 과장하지 않고 읽기 쉬운 문서로 정리합니다.</p>
+            <a class="card-link" href="resume-summary/README.md">요약 문장 보기</a>
           </article>
         </div>
       </section>
@@ -169,19 +182,178 @@
       <section class="section" id="languages" aria-labelledby="languages-title">
         <div class="section-heading">
           <p class="eyebrow">Languages</p>
-          <h2 id="languages-title">언어 기록</h2>
+          <h2 id="languages-title">언어</h2>
         </div>
-        <div class="language-grid">
-          <article class="info-card">
-            <span class="card-label">Japanese</span>
-            <h3>일본어 학습 기록</h3>
-            <p>문법, 어휘, 표현을 꾸준히 정리하며 실제 근거가 생기면 자격과 함께 갱신합니다.</p>
+        <p class="lead">
+          언어는 점수나 자격증을 과장하지 않고, 읽기·쓰기·말하기 기준으로 현재 근거가 있는 만큼만 표시합니다.
+          자격증이 생기면 같은 구조 안에 추가합니다.
+        </p>
+        <div class="score-legend" aria-label="언어 점수 기준">
+          <span><strong>0</strong> 기록 없음</span>
+          <span><strong>1</strong> 기초 학습</span>
+          <span><strong>2</strong> 짧은 자료 활용</span>
+          <span><strong>3</strong> 기술 문서 일부 활용</span>
+          <span><strong>4</strong> 독립 활용</span>
+          <span><strong>5</strong> 시험/업무 근거</span>
+        </div>
+
+        <div class="language-panels">
+          <article class="language-panel">
+            <div class="language-panel-heading">
+              <div>
+                <span class="card-label">Japanese</span>
+                <h3>일본어</h3>
+              </div>
+              <p>JLPT N2 장기 목표 / 현재 자격증 없음</p>
+            </div>
+            <div class="language-chart" aria-label="일본어 읽기 쓰기 말하기 날짜별 점수 그래프">
+              <svg viewBox="0 0 640 260" role="img" aria-labelledby="jp-chart-title jp-chart-desc">
+                <title id="jp-chart-title">일본어 실력 변화</title>
+                <desc id="jp-chart-desc">2026년 5월과 6월 일본어 읽기, 쓰기, 말하기 점수. 읽기와 쓰기는 1점, 말하기는 0점입니다.</desc>
+                <line class="axis" x1="58" y1="26" x2="58" y2="210"></line>
+                <line class="axis" x1="58" y1="210" x2="590" y2="210"></line>
+                <g class="grid-lines">
+                  <line x1="58" y1="173.2" x2="590" y2="173.2"></line>
+                  <line x1="58" y1="136.4" x2="590" y2="136.4"></line>
+                  <line x1="58" y1="99.6" x2="590" y2="99.6"></line>
+                  <line x1="58" y1="62.8" x2="590" y2="62.8"></line>
+                  <line x1="58" y1="26" x2="590" y2="26"></line>
+                </g>
+                <g class="axis-labels">
+                  <text x="36" y="214">0</text>
+                  <text x="36" y="177">1</text>
+                  <text x="36" y="140">2</text>
+                  <text x="36" y="103">3</text>
+                  <text x="36" y="66">4</text>
+                  <text x="36" y="30">5</text>
+                  <text x="88" y="242">2026-05</text>
+                  <text x="488" y="242">2026-06</text>
+                </g>
+                <polyline class="series reading" points="120,173.2 520,173.2"></polyline>
+                <polyline class="series writing" points="120,173.2 520,173.2"></polyline>
+                <polyline class="series speaking" points="120,210 520,210"></polyline>
+                <g class="points">
+                  <circle class="reading" cx="120" cy="173.2" r="5"></circle>
+                  <circle class="reading" cx="520" cy="173.2" r="5"></circle>
+                  <circle class="writing" cx="120" cy="173.2" r="4"></circle>
+                  <circle class="writing" cx="520" cy="173.2" r="4"></circle>
+                  <circle class="speaking" cx="120" cy="210" r="5"></circle>
+                  <circle class="speaking" cx="520" cy="210" r="5"></circle>
+                </g>
+              </svg>
+            </div>
+            <table class="language-table">
+              <thead>
+                <tr>
+                  <th>날짜</th>
+                  <th>읽기</th>
+                  <th>쓰기</th>
+                  <th>말하기</th>
+                  <th>근거</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-05</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>가나 문자 학습과 오답 기록 루틴 형성</td>
+                </tr>
+                <tr>
+                  <td>2026-06</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>N5/N4 어휘·문법 진입 준비</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="card-link" href="https://github.com/yg-gulbi/japanese-n2-study-log">일본어 학습 로그 보기</a>
           </article>
-          <article class="info-card">
-            <span class="card-label">English</span>
-            <h3>기술 문서 독해</h3>
-            <p>ROS, Linux, Arduino 공식 문서와 GitHub README 작성에 필요한 표현을 정리합니다.</p>
+
+          <article class="language-panel">
+            <div class="language-panel-heading">
+              <div>
+                <span class="card-label">English</span>
+                <h3>영어</h3>
+              </div>
+              <p>기술 문서 독해 / 현재 자격증 없음</p>
+            </div>
+            <div class="language-chart" aria-label="영어 읽기 쓰기 말하기 날짜별 점수 그래프">
+              <svg viewBox="0 0 640 260" role="img" aria-labelledby="en-chart-title en-chart-desc">
+                <title id="en-chart-title">영어 실력 기준점</title>
+                <desc id="en-chart-desc">2026년 6월 영어 읽기 3점, 쓰기 2점, 말하기 0점입니다.</desc>
+                <line class="axis" x1="58" y1="26" x2="58" y2="210"></line>
+                <line class="axis" x1="58" y1="210" x2="590" y2="210"></line>
+                <g class="grid-lines">
+                  <line x1="58" y1="173.2" x2="590" y2="173.2"></line>
+                  <line x1="58" y1="136.4" x2="590" y2="136.4"></line>
+                  <line x1="58" y1="99.6" x2="590" y2="99.6"></line>
+                  <line x1="58" y1="62.8" x2="590" y2="62.8"></line>
+                  <line x1="58" y1="26" x2="590" y2="26"></line>
+                </g>
+                <g class="axis-labels">
+                  <text x="36" y="214">0</text>
+                  <text x="36" y="177">1</text>
+                  <text x="36" y="140">2</text>
+                  <text x="36" y="103">3</text>
+                  <text x="36" y="66">4</text>
+                  <text x="36" y="30">5</text>
+                  <text x="488" y="242">2026-06</text>
+                </g>
+                <circle class="reading" cx="520" cy="99.6" r="6"></circle>
+                <circle class="writing" cx="520" cy="136.4" r="6"></circle>
+                <circle class="speaking" cx="520" cy="210" r="6"></circle>
+              </svg>
+            </div>
+            <table class="language-table">
+              <thead>
+                <tr>
+                  <th>날짜</th>
+                  <th>읽기</th>
+                  <th>쓰기</th>
+                  <th>말하기</th>
+                  <th>근거</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-06</td>
+                  <td>3</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td>ROS, Linux, Arduino 문서 독해와 README 작성</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="card-link" href="languages/english.md">영어 정리 보기</a>
           </article>
+        </div>
+
+        <div class="chart-legend" aria-label="그래프 범례">
+          <span><i class="legend-line reading"></i>읽기</span>
+          <span><i class="legend-line writing"></i>쓰기</span>
+          <span><i class="legend-line speaking"></i>말하기</span>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">Other Facts</p>
+          <h2 id="about-title">나를 설명하는 다른 사실들</h2>
+        </div>
+        <div class="about-facts">
+          <p>
+            저는 기계를 움직이게 만드는 일뿐 아니라, 생각을 문장으로 정리하는 일에도 오래 머무는 편입니다.
+            로봇을 만들 때도 회로, 코드, 제어식만 보지 않고 왜 그렇게 실패했는지, 무엇을 다음에 바꿔야 하는지
+            글로 남기려 합니다.
+          </p>
+          <p>
+            언어를 배우고, 클라이밍을 하며 몸의 감각을 살피고, 배운 것을 다시 정리하는 과정은 기술 밖의 시간이지만
+            결국 제가 문제를 보는 방식에 영향을 줍니다. 이 포트폴리오는 로보틱스 개발자로서의 기록이면서,
+            기록하고 배우는 사람으로서의 제 모습도 함께 남기는 공간입니다.
+          </p>
         </div>
       </section>
 
@@ -191,24 +363,24 @@
           <h2 id="docs-title">자세한 문서</h2>
         </div>
         <div class="link-grid">
-          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/blob/main/tech-stack/skill_matrix.md">
+          <a href="tech-stack/skill_matrix.md">
             <span>Skill Matrix</span>
-            <strong>기술 수준과 다음 보완점</strong>
+            <strong>기술 수준과 근거</strong>
           </a>
-          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/study-notes">
+          <a href="study-notes/README.md">
             <span>Study Notes</span>
-            <strong>학습 자료와 실습 계획</strong>
+            <strong>프로젝트가 아닌 학습 지도</strong>
           </a>
-          <a href="https://github.com/yg-gulbi/robotics-system-portfolio/tree/main/resume-summary">
-            <span>Resume Summary</span>
-            <strong>이력서용 요약 문장</strong>
+          <a href="languages/README.md">
+            <span>Languages</span>
+            <strong>읽기·쓰기·말하기 기준 언어</strong>
           </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Updated 2026-06-05</span>
+      <span>Updated 2026-06-10</span>
       <a href="#top">Back to top</a>
     </footer>
   </body>
